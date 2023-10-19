@@ -20,7 +20,7 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:5173/thanks"
+                value="https://portfolio2023-eta-ten.vercel.app/thanks"
               ></input>
               <div className="form-group">
                 <div className="form-row">
