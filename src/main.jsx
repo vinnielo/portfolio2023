@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import About from "./pages/About.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Home from "./pages/Home.jsx";
+import Work from "./pages/Work.jsx";
+import Contact from "./pages/Contact.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./index.css";
+
+import './assets/navbar.css'
+import ThankYou from "./pages/ThankYou.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +24,21 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
-        
       },
+      {
+        path: "apps",
+        element: <Work />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: 'thanks', 
+        element: <ThankYou />
+      }
     ],
   },
 ]);

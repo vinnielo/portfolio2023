@@ -1,92 +1,112 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import reactsvg from '../assets/react.svg'
+import React, { useState, useRef, useEffect } from "react";
+import {
+  FaBars,
+  FaTwitter,
+  FaFacebook,
+  FaLinkedin,
+  FaBehance,
+  FaGithub, 
+  FaInstagram
+} from "react-icons/fa";
 
-const navigation = [
-  { name: 'Home', href: '/',  },
-  { name: 'About', href: '/about', },
-  { name: 'Applications', href: '/apps',  }
-]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
-export default function Nav() {
+const links = [
+  {
+    id: 1,
+    url: "/",
+    text: "home",
+  },
+
+  {
+    id: 2,
+    url: "/about",
+    text: "About",
+  },
+  {
+    id: 3,
+    url: "/apps",
+    text: "Applications",
+  },
+  {
+    id: 4,
+    url: "/contact",
+    text: "Contact",
+  },
+];
+
+const socialLinks = [
+  {
+    id: 1,
+    url: "https://github.com/vinnielo",
+    icon: <FaGithub />,
+  },
+  {
+    id: 2,
+    url: "https://www.twitter.com",
+    icon: <FaTwitter />,
+  },
+  {
+    id: 3,
+    url: "https://www.twitter.com",
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 4,
+    url: "https://www.twitter.com",
+    icon: <FaInstagram />,
+  },
+];
+
+const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+  // for the links-container
+  const linksContainerRef = useRef(null);
+  // for the nav-links
+  const linksRef = useRef(null);
+
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
+
   return (
-    <Disclosure as="nav" className="bg-gray-800">
-      {({ open }) => (
-        <>
-          <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src={reactsvg}
-                    alt="Your Company"
-                  />
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              
+    <nav>
+      <div className="nav-center">
+        <div className="nav-header">
+          <a href="/" >Header</a>
+          <button
+            className="nav-toggle"
+            onClick={() => setShowLinks(!showLinks)}
+          >
+            <FaBars />
+          </button>
+        </div>
 
-               
-              </div>
-            </div>
-          </div>
+        <div ref={linksContainerRef} className="links-container">
+          <ul ref={linksRef} className="links">
+            {links.map((item) => (
+              <li key={item.id}>
+                <a href={item.url}>{item.text}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
-  )
-}
+        <ul className="social-icons">
+          {socialLinks.map((item) => (
+            <li key={item.id} className="px-3">
+              <a href={item.url}>{item.icon}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
+export default Navbar;
