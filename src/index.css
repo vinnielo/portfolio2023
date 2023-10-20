@@ -1,3 +1,40 @@
+@font-face {
+    font-family: 'KaushanScript';
+    src: local('KaushanScript'),
+    url('./fonts/Kausan_Script/KaushanScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: local('NothingYouCouldDo'),
+    url('./fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSansReg';
+    src: local('NunitoSansReg'),
+    url('./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansOsmanya';
+    src: local('NotoSansOsmanya'),
+    url('./fonts/Noto_Sans_Osmanya/NotoSansOsmanya-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSansItalic';
+    src: local('NunitoSansItalic'),
+    url('./fonts/Nunito_Sans//NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+}
+
+.font-face-kausan {
+    font-family: 'KaushanScript';
+}
+
+.font-face-nunito-italic {
+    font-family: 'NunitoSansItalic';
+}
+.font-face-nunito {
+    font-family: 'NunitoSansReg';
+}
 .formTitle {
   
     text-align: center;
@@ -5,5 +42,8 @@
   
 }
 
+.sliderContainer {
+    --slider-height-percentage: 35%
+}
 
 

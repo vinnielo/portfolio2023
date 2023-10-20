@@ -4,33 +4,26 @@ import image from "../assets/971.jpg";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
-// import AwesomeSliderStyles  from "react-awesome-slider/dist/custom-animations/fall-animation.css"
+import "react-awesome-slider/dist/custom-animations/fall-animation.css";
+import bg from '../assets/projectImgs/brandedGoodies.png'
+
+import {
+  FaHtml5,
+  FaCss3,
+  FaPhp,
+  FaJs,
+  FaReact,
+  FaAndroid,
+  FaApple,
+} from "react-icons/fa";
 
 export default function Work() {
   const projects = [
     {
       name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP and CSS.",
-      image: image,
-      url: "https://www.google.com",
-    },
-    {
-      name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP and CSS.",
-      image: image,
-      url: "https://www.google.com",
-    },
-    {
-      name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP and CSS.",
-      image: image,
-      url: "https://www.google.com",
-    },
-    {
-      name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP and CSS.",
-      image: image,
-      url: "https://www.google.com",
+      description: "A promotional goods e-commerce. Built PHP, SOAP, HTML and CSS.",
+      image: bg,
+      url: "https://brandedgoodies.com/",
     },
     {
       name: "branded goodies",
@@ -46,35 +39,58 @@ export default function Work() {
     left: 0,
     top: 0,
     width: "100%",
-    filter: "opacity(30%)"
+    filter: "opacity(30%)",
   };
+
+  const icons = [
+    {
+      image: <FaHtml5 />,
+    },
+    {
+      image: <FaCss3 />,
+    },
+    {
+      image: <FaJs />,
+    },
+    {
+      image: <FaPhp />,
+    },
+    {
+      image: <FaAndroid />,
+    },
+    {
+      image: <FaApple />,
+    },
+    {
+      image: <FaReact />,
+    },
+  ];
 
   return (
     <Container>
       <Row className="mt-5">
-        <Col>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            cupiditate odio velit qui magnam tempore natus veritatis vero
-            explicabo distinctio praesentium. Est dolorem ducimus eaque
-            cupiditate accusamus quasi hic debitis.
+        <Col className="flex flex-column justify-center items-center text-xl">
+          <p className="font-face-nunito">
+            Below are some of the projects I have worked on and contributed to. Feel free to ask any questions. I'd be glad to answer them
           </p>
         </Col>
       </Row>
       <Row>
         <Col>
           <h2 className="text-center my-4">Applications</h2>
-          <div className="h-1/2">
+          <div className="h-1/2 ">
             <AwesomeSlider
-              animation="cubeAnimation"
+              animation="fallAnimation"
               bullets={false}
-              className="my-4 "
+              className="my-4 sliderContainer"
             >
               {projects.map((item, i) => (
                 <div key={i} style={{ zIndex: 2 }}>
-                  <div>
+                  <div className="flex flex-column flex-wrap">
                     <img style={bgImg} alt="Wow" src={item.image} />
-                    <h1 className="text-white bg-gray-800 p-3.5 italic rounded-tl-3xl rounded-br-3xl">{item.name}</h1>
+                    <h1 className="text-white bg-gray-800 p-3.5 italic rounded-tl-3xl rounded-br-3xl">
+                      {item.name}
+                    </h1>
                     <h3 className="text-white italic ">{item.description}</h3>
                     <div>
                       <Button
@@ -89,6 +105,19 @@ export default function Work() {
                 </div>
               ))}
             </AwesomeSlider>
+          </div>
+        </Col>
+      </Row>
+      <Row >
+        <Col className="flex flex-column justify-center items-center bg-slate-300 mb-4 mx-3 ">
+          <h1 className="mb-4 font-face-nunito-italic">Technologies</h1>
+          <h3 className="font-face-nunito">A few I know</h3>
+          <div className="scroll-container w-50 rounded-md mb-5 font-face-nunito-italic">
+            {icons.map((icon, i) => (
+              <p key={i} className="mx-3 text-7xl">
+                {icon.image}
+              </p>
+            ))}
           </div>
         </Col>
       </Row>

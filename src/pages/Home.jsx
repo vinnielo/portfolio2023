@@ -8,12 +8,18 @@ export default function Home() {
     <Container fluid>
       <Row>
         <Col>
-        <Jumbotron  />
+        <Jumbotron className="h-1/2" />
         </Col>
       </Row>
       <Row>
-        <Col>
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta omnis tempore deleniti, optio animi dicta voluptates sint sunt qui esse sit. Perferendis, architecto odit beatae inventore commodi ut esse voluptates?</h3>
+        <Col className="flex flex-column justify-center items-center font-face-nunito" >
+          <h3 className="font-face-nunito-italic">Welcome to Vinnie's Web Development World!</h3>
+
+          <p className="font-face-nunito">🌐 Hi! I'm Vinnie, a dedicated web developer based in Los Angeles. Within this realm of ones and zeros, I transform concepts into interactive, user-friendly, and visually captivating online experiences.</p>
+
+          <p className="font-face-nunito">
+          Thank you for visiting my web development haven. Feel free to navigate, click, and explore the endless possibilities. If you have any questions or if there's a project you'd like to discuss, don't hesitate to get in touch.
+          </p>
         </Col>
       </Row>
     </Container>

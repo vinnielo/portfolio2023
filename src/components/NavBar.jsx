@@ -5,11 +5,11 @@ import {
   FaFacebook,
   FaLinkedin,
   FaBehance,
-  FaGithub, 
-  FaInstagram
+  FaGithub,
+  FaInstagram,
 } from "react-icons/fa";
-
-
+import { useLocation } from "react-router-dom";
+import logo from '../assets/Vinnie-Lopez-black-low-res.png'
 
 const links = [
   {
@@ -58,12 +58,17 @@ const socialLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({current, setCurrent}) => {
   const [showLinks, setShowLinks] = useState(false);
+  
   // for the links-container
   const linksContainerRef = useRef(null);
   // for the nav-links
   const linksRef = useRef(null);
+
+  // useLocation to get path
+  const location = useLocation();
+  console.log(location.pathname);
 
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
@@ -74,11 +79,25 @@ const Navbar = () => {
     }
   }, [showLinks]);
 
+  useEffect(() => {
+    if (location.pathname === "/about") {
+      setCurrent("About");
+    } else if (location.pathname === "/apps") {
+      setCurrent("Applications");
+    } else if (location.pathname === "/contact") {
+      setCurrent("Contact");
+    } else {
+      setCurrent("home");
+    }
+  }, []);
+
   return (
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <a href="/" >Vinnie Lopez</a>
+          <a href="/">
+            <img src={logo} alt="" width={225} />
+          </a>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}
@@ -90,8 +109,11 @@ const Navbar = () => {
         <div ref={linksContainerRef} className="links-container">
           <ul ref={linksRef} className="links">
             {links.map((item) => (
-              <li key={item.id}>
-                <a href={item.url}>{item.text}</a>
+              <li
+                key={item.id}
+                className={current === item.text ? "underline" : ""}
+              >
+                <a href={item.url} className="font-face-kausan">{item.text}</a>
               </li>
             ))}
           </ul>

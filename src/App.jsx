@@ -8,13 +8,14 @@ import Nav from './components/NavBar'
 import Footer from './components/Footer'
 
 function App() {
+  const [current, setCurrent] = useState("Home");
 
 
   return (
     <>
-   <Nav />
+   <Nav current={current} setCurrent={setCurrent} />
     <Outlet />
-    <Footer />
+    <Footer current={current} setCurrent={setCurrent} />
     </>
   )
 }

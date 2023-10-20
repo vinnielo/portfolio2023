@@ -1,9 +1,11 @@
 .scroll-container {
   display: flex;
+  /* background color for icons container */
   background-color: #333;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
+  align-items: center;
 }
 
 .scroll-container div {

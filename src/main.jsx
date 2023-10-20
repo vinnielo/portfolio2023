@@ -14,6 +14,8 @@ import './assets/navbar.css'
 import './assets/work.css'
 import ThankYou from "./pages/ThankYou.jsx";
 
+import './fonts/Kausan_Script/KaushanScript-Regular.ttf'
+
 const router = createBrowserRouter([
   {
     path: "/",

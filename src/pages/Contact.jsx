@@ -56,7 +56,7 @@ export default function Contact() {
                   placeholder="Your Message"
                   className="form-control rounded-xl"
                   name="message"
-                  rows="10"
+                  rows="8"
                   required
                 ></textarea>
               </div>
