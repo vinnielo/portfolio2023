@@ -46,6 +46,7 @@ export default function Work() {
     left: 0,
     top: 0,
     width: "100%",
+    filter: "opacity(30%)"
   };
 
   return (
