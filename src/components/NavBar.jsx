@@ -78,7 +78,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <a href="/" >Header</a>
+          <a href="/" >Vinnie Lopez</a>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}

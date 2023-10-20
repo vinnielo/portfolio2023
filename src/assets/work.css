@@ -1,0 +1,21 @@
+.scroll-container {
+  display: flex;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-container div {
+  padding: 10px;
+}
+
+.scroll-container div img {
+  padding: 10px;
+  max-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

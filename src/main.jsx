@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
 
 import './assets/navbar.css'
+import './assets/work.css'
 import ThankYou from "./pages/ThankYou.jsx";
 
 const router = createBrowserRouter([
