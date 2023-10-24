@@ -74,7 +74,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="btn btn-lg btn-dark btn-block bg-sky-300 first-letter my-4"
+                className="btn btn-lg btn-dark btn-block bg-violet-950 hover:bg-sky-700 first-letter my-4"
               >
                 Submit Form
               </button>
