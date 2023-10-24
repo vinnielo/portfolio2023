@@ -3,10 +3,10 @@ import computer from '../assets/971.jpg'
 
 
 export default function Contact() {
-    const prod = false
+    const prod = true
 
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col className=" my-4 ">
           <div className="container">

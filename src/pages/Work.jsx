@@ -15,6 +15,10 @@ import {
   FaReact,
   FaAndroid,
   FaApple,
+  FaAws,
+  FaStripe,
+  FaNodeJs, 
+  FaDatabase
 } from "react-icons/fa";
 
 export default function Work() {
@@ -45,29 +49,52 @@ export default function Work() {
   const icons = [
     {
       image: <FaHtml5 />,
+      caption: 'HTML5'
+    },
+    {
+      image: <FaNodeJs />,
+      caption: 'NodeJS'
     },
     {
       image: <FaCss3 />,
+      caption: 'CSS3'
     },
     {
       image: <FaJs />,
+      caption: 'JavaScript'
     },
     {
       image: <FaPhp />,
+      caption: 'Php'
     },
     {
       image: <FaAndroid />,
+      caption: 'Android/Kotlin'
     },
     {
       image: <FaApple />,
+      caption: 'iOS/Xcode'
     },
     {
       image: <FaReact />,
+      caption: 'ReactJS'
+    },
+    {
+      image: <FaAws />,
+      caption: 'AWS'
+    },
+    {
+      image: <FaDatabase />,
+      caption: 'MySQL/MongoDB/Firebase'
+    },
+    {
+      image: <FaStripe />,
+      caption: 'Stripe'
     },
   ];
 
   return (
-    <Container>
+    <Container fluid>
       <Row className="mt-5">
         <Col className="flex flex-column justify-center items-center text-xl">
           <p className="font-face-nunito">
@@ -109,14 +136,17 @@ export default function Work() {
         </Col>
       </Row>
       <Row >
-        <Col className="flex flex-column justify-center items-center bg-slate-300 mb-4 mx-3 ">
+        <Col className="flex flex-column justify-center items-center bg-slate-300 mb-4  ">
           <h1 className="mb-4 font-face-nunito-italic">Technologies</h1>
           <h3 className="font-face-nunito">A few I know</h3>
-          <div className="scroll-container w-50 rounded-md mb-5 font-face-nunito-italic">
+          <div className="scroll-container w-50 rounded-md mb-5 font-face-nunito-italic ">
             {icons.map((icon, i) => (
+              <div className="flex flex-col justify-center items-center pt-3">
               <p key={i} className="mx-3 text-7xl">
                 {icon.image}
               </p>
+              <p className="m-0">{icon.caption}</p>
+              </div>
             ))}
           </div>
         </Col>
