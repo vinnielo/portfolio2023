@@ -136,7 +136,7 @@ export default function Work() {
         </Col>
       </Row>
       <Row >
-        <Col className="flex flex-column justify-center items-center bg-slate-300 mb-4  ">
+        <Col className="flex flex-column justify-center items-center backdrop-blur bg-white/50 mb-4  ">
           <h1 className="mb-4 font-face-nunito-italic">Technologies</h1>
           <h3 className="font-face-nunito">A few I know</h3>
           <div className="scroll-container w-50 rounded-md mb-5 font-face-nunito-italic ">

@@ -3,7 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 
 export default function Home() {
   return (
-    <Container fluid>
+    <Container fluid >
       <Row>
         <Col>
           <Jumbotron className="h-1/2" />
