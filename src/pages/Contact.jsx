@@ -1,7 +1,7 @@
 import { Container, Col, Row } from "react-bootstrap";
 import computer from "../assets/971.jpg";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+// import { loadFull } from "tsparticles";
 
 export default function Contact() {
   const prod = true;
@@ -84,8 +84,8 @@ export default function Contact() {
         <Col className="">
           <Particles
             id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
+            // init={particlesInit}
+            // loaded={particlesLoaded}
             // options={{
             //   fpsLimit: 120,
             //   interactivity: {
