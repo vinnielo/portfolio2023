@@ -13,8 +13,8 @@ const data = [
   },
   {
     image: freeway,
-    caption: "Caption",
-    description: "Description Here",
+    caption: "Consultations",
+    description: "Willing to help you build your project from the ground up!",
   },
   {
     image: image,
