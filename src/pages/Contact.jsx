@@ -37,7 +37,7 @@ export default function Contact() {
                 name="_next"
                 value={
                   prod
-                    ? "https://portfolio2023-eta-ten.vercel.app/thanks"
+                    ? "https://vinnielo2024-eta-ten.vercel.app/thanks"
                     : "http://localhost:5173/thanks"
                 }
               ></input>
