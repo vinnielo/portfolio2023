@@ -3,7 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 
 export default function Home() {
   return (
-    <Container fluid >
+    <Container fluid>
       <Row>
         <Col>
           <Jumbotron className="h-1/2" />
@@ -12,11 +12,13 @@ export default function Home() {
       <Row>
         <Col className="flex flex-column justify-center items-center font-face-nunito">
           <h3 className="font-face-nunito-italic">
-            Welcome to Vinnie's Web Development World!
+            Vinnie Lopez Full Stack Developer
           </h3>
 
           <p className="font-face-nunito">
             🌐 Hi! I'm Vinnie, a dedicated web developer based in Los Angeles.
+          </p>
+          <p>
             Within this realm of ones and zeros, I transform concepts into
             interactive, user-friendly, and visually captivating online
             experiences.
