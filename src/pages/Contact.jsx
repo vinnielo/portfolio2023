@@ -15,7 +15,7 @@ export default function Contact() {
     console.log(container);
   };
 
-  return (
+ return (
     <Container fluid>
       <Row>
         <Col className=" my-4 backdrop-blur bg-white/50 rounded-xl">
@@ -84,75 +84,7 @@ export default function Contact() {
         <Col className="">
           <Particles
             id="tsparticles"
-            // init={particlesInit}
-            // loaded={particlesLoaded}
-            // options={{
-            //   fpsLimit: 120,
-            //   interactivity: {
-            //     events: {
-            //       onClick: {
-            //         enable: true,
-            //         mode: "push"
-            //       },
-            //       onHover: {
-            //         enable: true,
-            //         mode: "repulse"
-            //       },
-            //       resize: true
-            //     },
-            //     modes: {
-            //       push: {
-            //         quantity: 4
-            //       },
-            //       repulse: {
-            //         distance: 200,
-            //         duration: 0.4
-            //       }
-            //     }
-            //   },
-            //   particles: {
-            //     color: {
-            //       value: "#ffffff"
-            //     },
-            //     links: {
-            //       color: "#ffffff",
-            //       distance: 150,
-            //       enable: true,
-            //       opacity: 0.5,
-            //       width: 1
-            //     },
-            //     collisions: {
-            //       enable: true
-            //     },
-            //     move: {
-            //       direction: "none",
-            //       enable: true,
-            //       outModes: {
-            //         default: "bounce"
-            //       },
-            //       random: false,
-            //       speed: 1,
-            //       straight: false
-            //     },
-            //     number: {
-            //       density: {
-            //         enable: true,
-            //         area: 800
-            //       },
-            //       value: 80
-            //     },
-            //     opacity: {
-            //       value: 0.5
-            //     },
-            //     shape: {
-            //       type: "circle"
-            //     },
-            //     size: {
-            //       value: { min: 1, max: 5 }
-            //     }
-            //   },
-            //   detectRetina: true
-            // }}
+            
             options={{
               fullScreen: {
                 enable: true,
@@ -230,19 +162,7 @@ export default function Contact() {
               interactivity: {
                 // detect_on: "canvas",
                 events: {
-                  // onHover: {
-                  //   enable: true,
-                  //   mode: "bubble",
-                  //   parallax: {
-                  //     enable: false,
-                  //     force: 60,
-                  //     smooth: 10,
-                  //   },
-                  // },
-                  // onClick: {
-                  //   enable: true,
-                  //   mode: "push",
-                  // },
+                 
                   resize: true,
                 },
                 modes: {
@@ -295,3 +215,4 @@ export default function Contact() {
     </Container>
   );
 }
+ 

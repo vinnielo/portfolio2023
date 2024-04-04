@@ -25,15 +25,15 @@ export default function Work() {
   const projects = [
     {
       name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP, HTML and CSS.",
+      description: "A promotional goods e-commerce site. Built with PHP, SOAP, HTML and CSS.",
       image: bg,
       url: "https://brandedgoodies.com/",
     },
     {
-      name: "branded goodies",
-      description: "A promotional goods e-commerce. Built PHP, SOAP and CSS.",
-      image: image,
-      url: "https://www.google.com",
+      name: "Once Upon an Adventure",
+      description: "A full-stack MERN RPG game. Built with Express, Mongoose, React, Node.",
+      image: "https://github.com/vinnielo/once-upon-an-adventure/blob/master/client/src/images/Castle-Banner.png?raw=true",
+      url: "https://once-upon-an-adventure.onrender.com/user/660f238b0dc07b00631766c4",
     },
   ];
 
