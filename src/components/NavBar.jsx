@@ -26,7 +26,7 @@ const links = [
   {
     id: 3,
     url: "/apps",
-    text: "Applications",
+    text: "Projects",
   },
   {
     id: 4,

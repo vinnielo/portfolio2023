@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import image from "../assets/971.jpg";
+import watche from '../assets/projectImgs/thewatche.png'
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
@@ -34,6 +34,12 @@ export default function Work() {
       description: "A full-stack MERN RPG game. Built with Express, Mongoose, React, Node.",
       image: "https://github.com/vinnielo/once-upon-an-adventure/blob/master/client/src/images/Castle-Banner.png?raw=true",
       url: "https://once-upon-an-adventure.onrender.com/user/660f238b0dc07b00631766c4",
+    },
+    {
+      name: "The Watche",
+      description: "A React-Native application that provides artists spaces to record music.",
+      image: watche,
+      url: "https://apps.apple.com/us/app/the-watche/id1529520827",
     },
   ];
 
@@ -118,7 +124,7 @@ export default function Work() {
                     <h1 className="text-white bg-gray-800 p-3.5 italic rounded-tl-3xl rounded-br-3xl">
                       {item.name}
                     </h1>
-                    <h3 className="text-white italic ">{item.description}</h3>
+                    <h3 className="text-white italic">{item.description}</h3>
                     <div>
                       <Button
                         href={item.url}
@@ -135,10 +141,10 @@ export default function Work() {
           </div>
         </Col>
       </Row>
-      <Row >
+      <Row style={{marginBottom: '150px'}}>
         <Col className="flex flex-column justify-center items-center backdrop-blur bg-white/50 mb-4  ">
           <h1 className="mb-4 font-face-nunito-italic">Technologies</h1>
-          <h3 className="font-face-nunito">A few I know</h3>
+          <h3 className="font-face-nunito">Still adding...</h3>
           <div className="scroll-container w-50 rounded-md mb-5 font-face-nunito-italic ">
             {icons.map((icon, i) => (
               <div className="flex flex-col justify-center items-center pt-3">

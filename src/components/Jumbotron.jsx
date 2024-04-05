@@ -2,14 +2,15 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import image from "../assets/sunset.jpeg";
 import freeway from "../assets/971.jpg";
+import tutoring from '../assets/tutoringcode.jpg'
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 const data = [
   {
     image: image,
-    caption: "Los Angeles",
-    description: "City that made me who I am.",
+    caption: "Full-Stack Developer",
+    description: "MERN, HTML, CSS, JavaScript, GraphQL, and Databases",
   },
   {
     image: freeway,
@@ -17,9 +18,9 @@ const data = [
     description: "Willing to help you build your project from the ground up!",
   },
   {
-    image: image,
-    caption: "Caption",
-    description: "Description Here",
+    image: tutoring,
+    caption: "Tutoring",
+    description: "Teaching future developers from zero to hero",
   },
 ];
 

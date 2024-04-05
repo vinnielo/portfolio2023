@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Jumbotron from "../components/Jumbotron";
+import { Button } from "flowbite-react";
 
 export default function Home() {
   return (
@@ -9,11 +10,11 @@ export default function Home() {
           <Jumbotron className="h-1/2" />
         </Col>
       </Row>
-      <Row>
+      <Row style={{marginBottom: '100px'}}>
         <Col className="flex flex-column justify-center items-center font-face-nunito">
-          <h3 className="font-face-nunito-italic">
+          {/* <h3 className="font-face-nunito-italic">
             Vinnie Lopez Full Stack Developer
-          </h3>
+          </h3> */}
 
           <p className="font-face-nunito">
             🌐 Hi! I'm Vinnie, a dedicated web developer based in Los Angeles.
@@ -32,6 +33,8 @@ export default function Home() {
           </p>
         </Col>
       </Row>
+
+     
     </Container>
   );
 }
