@@ -33,7 +33,7 @@ export default function Work() {
       name: "Once Upon an Adventure",
       description: "A full-stack MERN RPG game. Built with Express, Mongoose, React, Node.",
       image: "https://github.com/vinnielo/once-upon-an-adventure/blob/master/client/src/images/Castle-Banner.png?raw=true",
-      url: "https://streamyard.com/tsqg64cus6",
+      url: "https://once-upon-an-adventure-app.vercel.app/",
     },
     {
       name: "The Watche",
